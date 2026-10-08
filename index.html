@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Defive dev play</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">DEFIVE<span> DEV</span></div>
+    <div id="timer" class="timer">00:00.0</div>
+  </header>
+
+  <main>
+    <section id="menu" class="screen active">
+      <div class="hero">
+        <p class="eyebrow">DESAFIO DE CÓDIGO</p>
+        <h1>Complete o código.</h1>
+        <p>Escolha uma linguagem e complete os trechos corretamente. Por enquanto apenas Python está disponível.</p>
+      </div>
+      <div class="language-grid">
+        <button class="language-card available" data-language="python">
+          <span class="lang-icon">🐍</span>
+          <strong>Python</strong>
+          <small>10 desafios • Fácil → Difícil</small>
+          <span class="play">JOGAR →</span>
+        </button>
+        <button class="language-card disabled"><span class="lang-icon">☕</span><strong>Java</strong><small>Em breve</small></button>
+        <button class="language-card disabled"><span class="lang-icon">JS</span><strong>JavaScript</strong><small>Em breve</small></button>
+        <button class="language-card disabled"><span class="lang-icon">&lt;/&gt;</span><strong>HTML / CSS</strong><small>Em breve</small></button>
+      </div>
+    </section>
+
+    <section id="game" class="screen">
+      <div class="game-head">
+        <div>
+          <p class="eyebrow">PYTHON</p>
+          <h2>Complete o trecho</h2>
+        </div>
+        <div id="progress">1 / 10</div>
+      </div>
+      <div id="difficulty" class="difficulty">FÁCIL</div>
+      <div class="code-wrap"><img id="code-image" alt="Código Python com trecho faltando"></div>
+      <div id="dots" class="dots"></div>
+      <p class="instruction">Digite exatamente o que falta no código.</p>
+      <form id="answer-form" autocomplete="off">
+        <input id="answer" type="text" inputmode="text" autocapitalize="off" spellcheck="false" placeholder="Digite sua resposta..." autofocus>
+        <button type="submit">CONFIRMAR</button>
+      </form>
+      <div id="feedback" class="feedback"></div>
+      <button id="quit" class="link-btn">Voltar ao menu</button>
+    </section>
+
+    <section id="result" class="screen">
+      <p class="eyebrow">DESAFIO FINALIZADO</p>
+      <h1>Seu resultado</h1>
+      <div class="result-card">
+        <div><span>Acertos</span><strong id="final-score">0/10</strong></div>
+        <div><span>Tempo</span><strong id="final-time">00:00.0</strong></div>
+      </div>
+      <p id="result-message"></p>
+      <div class="result-dots" id="result-dots"></div>
+      <button id="again" class="primary">JOGAR NOVAMENTE</button>
+      <button id="menu-again" class="secondary">VOLTAR AO MENU</button>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
